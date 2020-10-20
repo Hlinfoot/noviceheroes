@@ -22,7 +22,7 @@ class App extends Component {
             <ItemModal></ItemModal>
             <CommentSection />
           </Container>
-          <Dropdown></Dropdown>
+          <Dropdown />
         </div>
       </Provider>
     );

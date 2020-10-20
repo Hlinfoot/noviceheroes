@@ -1,4 +1,4 @@
 module.exports = {};
 module.exports = {
-  mongoURI: "1d39473a-73af-40d3-b991-e67b96ec4cbb",
+  mongoURI: "mongodb+srv://hlinfoot:foot1234@cluster0.8x5x8.mongodb.net/Cluster0?retryWrites=true&w=majority",
 };

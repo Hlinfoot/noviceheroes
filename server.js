@@ -7,7 +7,8 @@ const items = require("./routes/api/items");
 
 const app = express();
 
-//BodyPareser Middleware
+app.set('view-engine', 'ejs')
+
 app.use(bodyParser.json());
 
 const db = require("./config/keys").mongoURI;

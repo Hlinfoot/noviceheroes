@@ -1,36 +1,36 @@
 import axios from "axios";
-import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from "./types";
+import { GET_COMMENTS, ADD_COMMENT, DELETE_COMMENT, COMMENTS_LOADING } from "./types";
 
-export const getItems = () => (dispatch) => {
-  dispatch(settItemsLoading());
+export const getComments = () => (dispatch) => {
+  dispatch(settCommentsLoading());
   axios.get("/api/items").then((res) =>
     dispatch({
-      type: GET_ITEMS,
+      type: GET_COMMENTS,
       payload: res.data,
     })
   );
 };
 
-export const addItem = (item) => (dispatch) => {
-  axios.post("/api/items", item).then((res) =>
+export const addComment = (comment) => (dispatch) => {
+  axios.post("/api/items", comment).then((res) =>
     dispatch({
-      type: ADD_ITEM,
+      type: ADD_COMMENT,
       payload: res.data,
     })
   );
 };
 
-export const deleteItem = (id) => (dispatch) => {
+export const deleteComment = (id) => (dispatch) => {
   axios.delete(`/api/items/${id}`).then((res) =>
     dispatch({
-      type: DELETE_ITEM,
+      type: DELETE_COMMENT,
       payload: id,
     })
   );
 };
 
-export const settItemsLoading = () => {
+export const settCommentsLoading = () => {
   return {
-    type: ITEMS_LOADING,
+    type: COMMENTS_LOADING,
   };
 };

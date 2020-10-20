@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AppNavbar from "./components/AppNavbar";
-import ShoppingList from "./components/ShoppingList";
+import CommentSection from "./components/CommentSection";
+import Dropdown from "./components/Dropdown";
 import ItemModal from "./components/ItemModal";
 import { Container } from "reactstrap";
 
@@ -17,9 +18,11 @@ class App extends Component {
         <div className="App">
           <AppNavbar />
           <Container>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6cPxMu7_cTo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <ItemModal></ItemModal>
-            <ShoppingList />
+            <CommentSection />
           </Container>
+          <Dropdown></Dropdown>
         </div>
       </Provider>
     );

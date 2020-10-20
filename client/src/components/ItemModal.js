@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 
 import { connect } from "react-redux";
-import { addItem } from "../actions/itemActions";
+import { addComment } from "../actions/itemActions";
 
 class ItemModal extends Component {
   state = {
@@ -36,7 +36,7 @@ class ItemModal extends Component {
     const newItem = {
       name: this.state.name,
     };
-    this.props.addItem(newItem);
+    this.props.addComment(newItem);
 
     this.toggle();
   };
@@ -49,25 +49,25 @@ class ItemModal extends Component {
           style={{ marginBottom: "2rem" }}
           onClick={this.toggle}
         >
-          Add Item
+          Comment
         </Button>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Add to Shopping List</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Share your thoughts, be kind!</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
                 <Label for="item">
-                  item
+                  
                   <Input
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Add shopping item"
+                    placeholder="Leave a comment"
                     onChange={this.onChange}
                   ></Input>
                   <Button color="dark" style={{ marginTop: "2rem" }} block>
-                    Add Item
+                    Submit
                   </Button>
                 </Label>
               </FormGroup>
@@ -83,4 +83,4 @@ const mapStateToProps = (state) => ({
   item: state.item,
 });
 
-export default connect(mapStateToProps, { addItem })(ItemModal);
+export default connect(mapStateToProps, { addComment })(ItemModal);

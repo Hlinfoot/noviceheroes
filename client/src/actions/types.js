@@ -1,4 +1,4 @@
-export const GET_ITEMS = "GET_ITEMS";
-export const ADD_ITEM = "ADD_ITEM";
-export const DELETE_ITEM = "DELETE_ITEM";
-export const ITEMS_LOADING = "ITEMS_LOADING";
+export const GET_COMMENTS = "GET_COMMENTS";
+export const ADD_COMMENT = "ADD_COMMENT";
+export const DELETE_COMMENT = "DELETE_COMMENT";
+export const COMMENTS_LOADING = "COMMENTS_LOADING";

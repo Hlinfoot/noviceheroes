@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const db = require("./config/keys").mongoURI;
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts',
+  process.env.MONGODB_URI || 'mongodb://localhost/comments',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

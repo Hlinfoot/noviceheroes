@@ -3,9 +3,6 @@ const router = express.Router();
 
 const Item = require("../../models/Item");
 
-//@route POST api/items
-//@desc  Create A Post
-//@acess Public
 router.get("/", (req, res) => {
   Item.find()
     .sort({ date: -1 })

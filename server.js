@@ -11,15 +11,10 @@ app.use(bodyParser.json());
 
 const db = require("./config/keys").mongoURI;
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/comments',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  }
-);
+mongoose.connect(db)
+  .then(() => console.log('Connected to server...'))
+  .catch(err => console.log(err));
+
 app.use("/api/items", items);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
